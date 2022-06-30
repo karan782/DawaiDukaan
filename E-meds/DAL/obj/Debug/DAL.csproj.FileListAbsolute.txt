@@ -1,0 +1,12 @@
+D:\PhaseProject\Capstone Project\E-meds\DAL\bin\Debug\DAL.dll.config
+D:\PhaseProject\Capstone Project\E-meds\DAL\bin\Debug\DAL.dll
+D:\PhaseProject\Capstone Project\E-meds\DAL\bin\Debug\DAL.pdb
+D:\PhaseProject\Capstone Project\E-meds\DAL\bin\Debug\EntityFramework.dll
+D:\PhaseProject\Capstone Project\E-meds\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\PhaseProject\Capstone Project\E-meds\DAL\bin\Debug\EntityFramework.xml
+D:\PhaseProject\Capstone Project\E-meds\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\PhaseProject\Capstone Project\E-meds\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\PhaseProject\Capstone Project\E-meds\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\PhaseProject\Capstone Project\E-meds\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\PhaseProject\Capstone Project\E-meds\DAL\obj\Debug\DAL.dll
+D:\PhaseProject\Capstone Project\E-meds\DAL\obj\Debug\DAL.pdb

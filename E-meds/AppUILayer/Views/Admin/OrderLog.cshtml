@@ -1,0 +1,28 @@
+﻿@model List<DAL.Models.OrderInfo>
+@{
+    ViewBag.Title = "OrderLog";
+    Layout = "~/Views/Admin/Shared/_LayoutPageAdmin.cshtml";
+}
+
+<div class="has-bg-img">
+    <img class="bg-img img-fluid" src="~/Images/home.jpg" alt="...">
+</div>
+<div class="bg-text" style="overflow-x:auto;">
+    <table class="table table-responsive table-hover table-bordered">
+        <tr class="bg-info">
+            <th>OrderID</th>
+            <th>CustomerID</th>
+            <th>OrderDate</th>
+            <th>ShippDate</th>
+        </tr>
+        @foreach (var prod in Model)
+        {
+        <tr style="color: white;">
+        <td>@prod.OrderId</td>
+        <td>@prod.custid</td>
+        <td>@prod.OrderDate</td>
+        <td>@prod.ShippDate</td>
+    </tr>
+        }
+    </table>
+</div>

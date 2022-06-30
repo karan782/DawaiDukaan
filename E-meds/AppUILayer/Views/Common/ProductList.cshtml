@@ -1,0 +1,35 @@
+﻿@model List<DAL.Models.Product>
+@{
+    ViewBag.Title = "ProductList";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<div class="has-bg-img">
+    <img class="bg-img img-fluid" src="~/Images/home.jpg" alt="...">
+</div>
+<div class="bg-text" style="overflow-x:auto;">
+    <div class="add-btn" style="padding-bottom:10px;">
+        @Html.ActionLink("Login to Order", "UserLogin", "Common", new { @class = "btn btn-success" })
+    </div>
+    <table class="table table-responsive table-hover table-bordered">
+        <tr class="bg-info">
+            <th>ProductId</th>
+            <th>ProductName</th>
+            <th> Brand</th>
+            <th> Category</th>
+            <th> MRP</th>
+
+        </tr>
+        @foreach (var prod in Model)
+        {
+            <tr style="color: white;">
+                <td>@prod.ProId</td>
+                <td>@prod.ProName</td>
+                <td>@prod.BrandName</td>
+                <td>@prod.Category</td>
+                <td>@prod.mrp</td>
+
+            </tr>
+        }
+    </table>
+</div>

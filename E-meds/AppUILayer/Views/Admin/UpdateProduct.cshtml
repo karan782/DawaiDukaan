@@ -1,0 +1,47 @@
+﻿@model DAL.Models.Product
+@{
+    ViewBag.Title = "UpdateProduct";
+    Layout = "~/Views/Admin/Shared/_LayoutPageAdmin.cshtml";
+}
+
+<div class="has-bg-img">
+    <img class="bg-img img-fluid" src="~/Images/home.jpg" alt="...">
+</div>
+<div class="bg-text" style="overflow-x:auto;">
+
+    @using (Html.BeginForm("UpdateProduct", "Admin", FormMethod.Post))
+    {
+        <div class="row">
+            <div class="col-md-6">
+                <div>
+                    <span style="color: gold;"> Product ID: </span> @Model.ProId @Html.HiddenFor(m => m.ProId)
+                </div>
+                <br />
+                <div>
+                    <span style="color: gold;"> @Html.Label("Product Name:")</span>
+                    @Html.TextBoxFor(m => m.ProName, new { @class = "form-control" })
+                </div>
+                <br />
+                <div>
+                    <span style="color: gold;"> @Html.Label("Brand:") </span>
+                    @Html.TextBoxFor(m => m.BrandName, new { @class = "form-control" })
+                </div>
+                <br />
+                <div>
+                    <span style="color: gold;"> @Html.Label("Category:")</span>
+                    @Html.TextBoxFor(m => m.Category, new { @class = "form-control" })
+                </div>
+                <br />
+                <div>
+                    <span style="color: gold;"> @Html.Label("MRP:")</span>
+                    @Html.TextBoxFor(m => m.mrp, new { @class = "form-control" })
+                </div>
+                <br />
+                <div>
+                    <input type="submit" value="Update" class="btn btn-success" />
+                </div>
+            </div>
+        </div>
+    }
+</div>
+

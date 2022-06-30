@@ -1,0 +1,88 @@
+﻿@model string
+@{
+    ViewBag.Title = "ProductsCard";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+<div class="has-bg-img">
+    <img class="bg-img img-fluid" src="~/Images/home.jpg" alt="...">
+</div>
+
+<div class="bg-text" style="overflow-x:auto;">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card h-100">
+                <img src="~/Images/Fever.jpg" class="card-img-top" style="border-radius: 20px; width: 100%; height: auto; display:flex;" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Fever</h5>
+                    <h6>@Html.ActionLink("See All Products", "ProductsByCategory", "Common", new { category = "Fever" }, new { @class = "btn btn-outline-success" })</h6>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">6 products</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="~/Images/SkinTreatment.jpg" class="card-img-top" style="border-radius: 20px; width: 100%; height: auto; display: flex;" alt="...">
+              
+                <div class="card-body">
+                    <h5 class="card-title">Skin Treatment</h5>
+                    <h6>@Html.ActionLink("See All Products", "ProductsByCategory", "Common", new { category = "Skin Treatment" }, new { @class = "btn btn-outline-success" })</h6>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">6 products</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="~/Images/Vitamins.jpg" class="card-img-top" style="border-radius: 20px; width: 100%; height: auto; display: flex;" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Vitamins and Supplements</h5>
+                    <h6>@Html.ActionLink("See All Products", "ProductsByCategory", "Common", new { category = "Vitamins and Supplements" }, new { @class = "btn btn-outline-success" })</h6>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">6 products</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="~/Images/Ayurvedic.jpg" class="card-img-top" style="border-radius: 20px; width: 100%; height: auto; display: flex;" alt="...">
+                
+                <div class="card-body">
+                    <h5 class="card-title">Ayurvedic</h5>
+                    <h6>@Html.ActionLink("See All Products", "ProductsByCategory", "Common", new { category = "Ayurvedic" }, new { @class = "btn btn-outline-success" })</h6>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">6 products</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="~/Images/First-Aid.jpg" class="card-img-top" style="border-radius: 20px; width: 100%; height: auto; display: flex;" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">First-Aid</h5>
+                    <h6>@Html.ActionLink("See All Products", "ProductsByCategory", "Common", new { category = "First-Aid" }, new { @class = "btn btn-outline-success" })</h6>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">6 products</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="~/Images/Cough.jpg" class="card-img-top" style="border-radius: 20px; width: 100%; height: auto; display: flex;" alt="...">
+               
+                <div class="card-body">
+                    <h5 class="card-title">Cough and Cold</h5>
+                    <h6>@Html.ActionLink("See All Products", "ProductsByCategory", "Common", new { category = "Cough and Cold" }, new { @class = "btn btn-outline-success" })</h6>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">6 products</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>

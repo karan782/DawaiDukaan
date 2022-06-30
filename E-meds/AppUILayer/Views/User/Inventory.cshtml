@@ -1,0 +1,44 @@
+﻿@model List<DAL.Models.Product>
+@{
+    ViewBag.Title = "Inventory";
+    Layout = "~/Views/User/Shared/_LayoutPageUser.cshtml";
+}
+
+<div class="has-bg-img">
+    <img class="bg-img img-fluid" src="~/Images/home.jpg" alt="...">
+</div>
+<div class="bg-text" style="overflow-x:auto;">
+    @if (TempData["AlertMessage"] != null)
+    {
+        <div class="alert alert-success" id="success-alert">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+            </svg>
+            <strong>Success! </strong>@TempData["AlertMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" ; style="float:right">
+            </button>
+        </div>
+    }
+    <br />
+    <table class="table table-responsive table-hover table-bordered">
+        <tr class="bg-info">
+            <th>ProductId</th>
+            <th>ProductName</th>
+            <th> Brand</th>
+            <th> Category</th>
+            <th> MRP</th>
+            <th style="text-align:center">Action</th>
+        </tr>
+        @foreach (var prod in Model)
+        {
+            <tr style="color: white;">
+                <td>@prod.ProId</td>
+                <td>@prod.ProName</td>
+                <td>@prod.BrandName</td>
+                <td>@prod.Category</td>
+                <td>@prod.mrp</td>
+                <td>@Html.ActionLink("Add to Cart", "AddToCart", "User", new { id = prod.ProId }, new { @class = "btn btn-info" })</td>
+            </tr>
+        }
+    </table>
+</div>

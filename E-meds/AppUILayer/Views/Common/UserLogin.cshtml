@@ -1,0 +1,40 @@
+﻿@model AppUILayer.Models.Credentials
+@{
+    ViewBag.Title = "UserLogin";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<div class="has-bg-img">
+    <img class="bg-img img-fluid" src="~/Images/home.jpg" alt="...">
+</div>
+
+<div class="bg-text" style="overflow-x:auto;">
+    <div class="add-btn" style="padding-bottom:10px;">
+        @Html.ActionLink("New User", "NewUser", "Common", new { @class = "btn btn-success" })
+    </div>
+    @using (Html.BeginForm("ValidateUser", "Common", FormMethod.Post))
+    {
+        <div class="row">
+            <div class="col-md-6">
+                <div>
+                    @Html.Label("User Email ID:")
+                    @Html.TextBoxFor(m => m.EmailId, new { @class = "form-control", @placeholder = "Enter Email Id" })
+                </div>
+                <br />
+                <div>
+                    @Html.Label("Password:")
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Enter Password" })
+                </div>
+                <br />
+                <div>
+                    <input type="submit" value="Login" class="btn btn-danger" />
+                </div>
+                <br />
+                @if (ViewBag.error != null)
+                {
+                    <p class="text" style="font:600; color:darkorange">@ViewBag.error</p>
+                }
+            </div>
+        </div>
+    }
+</div>

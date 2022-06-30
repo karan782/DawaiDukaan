@@ -1,0 +1,12 @@
+D:\PhaseProject\Capstone Project\E-meds\BLL\bin\Debug\BLL.dll
+D:\PhaseProject\Capstone Project\E-meds\BLL\bin\Debug\BLL.pdb
+D:\PhaseProject\Capstone Project\E-meds\BLL\bin\Debug\DAL.dll
+D:\PhaseProject\Capstone Project\E-meds\BLL\bin\Debug\EntityFramework.dll
+D:\PhaseProject\Capstone Project\E-meds\BLL\bin\Debug\DAL.pdb
+D:\PhaseProject\Capstone Project\E-meds\BLL\bin\Debug\DAL.dll.config
+D:\PhaseProject\Capstone Project\E-meds\BLL\bin\Debug\EntityFramework.xml
+D:\PhaseProject\Capstone Project\E-meds\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\PhaseProject\Capstone Project\E-meds\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\PhaseProject\Capstone Project\E-meds\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\PhaseProject\Capstone Project\E-meds\BLL\obj\Debug\BLL.dll
+D:\PhaseProject\Capstone Project\E-meds\BLL\obj\Debug\BLL.pdb

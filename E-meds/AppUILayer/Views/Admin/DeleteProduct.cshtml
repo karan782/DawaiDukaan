@@ -1,0 +1,41 @@
+﻿@model DAL.Models.Product
+@{
+    ViewBag.Title = "DeleteProduct";
+    Layout = "~/Views/Admin/Shared/_LayoutPageAdmin.cshtml";
+}
+
+<div class="has-bg-img">
+    <img class="bg-img img-fluid" src="~/Images/home.jpg" alt="...">
+</div>
+<div class="bg-text" style="overflow-x:auto;">
+    @using (Html.BeginForm("DeleteProduct", "Admin", FormMethod.Post))
+    {
+        <div class="row">
+            <div class="col-md-6">
+                <div>
+                    <span style="color: gold;">Product ID: </span>@Model.ProId @Html.HiddenFor(m => m.ProId)
+                </div>
+                <div>
+                    <br />
+                    <span style="color: gold;">Product Name: </span>@Model.ProName @Html.HiddenFor(m => m.ProName)
+                </div>
+                <div>
+                    <br />
+                    <span style="color: gold;">Brand: </span>@Model.BrandName @Html.HiddenFor(m => m.BrandName)
+                </div>
+                <div>
+                    <br />
+                    <span style="color: gold;">Category: </span>@Model.Category @Html.HiddenFor(m => m.Category)
+                </div>
+                <div>
+                    <br />
+                    <span style="color: gold;">MRP: </span>@Model.mrp @Html.HiddenFor(m => m.mrp)
+                </div>
+                <br />
+                <div>
+                    <input type="submit" value="Delete" class="btn btn-danger" />
+                </div>
+            </div>
+        </div>
+    }
+</div>

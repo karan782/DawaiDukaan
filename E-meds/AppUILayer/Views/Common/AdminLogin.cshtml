@@ -1,0 +1,36 @@
+﻿@model AppUILayer.Models.Credentials
+@{
+    ViewBag.Title = "AdminLogin";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<div class="has-bg-img">
+    <img class="bg-img img-fluid" src="~/Images/home.jpg" alt="...">
+</div>
+
+<div class="bg-text" style="overflow-x:auto;">
+    @using (Html.BeginForm("ValidateAdmin", "Common", FormMethod.Post))
+    {
+        <div class="row">
+            <div class="col-md-6">
+                <div>
+                    @Html.Label("Admin Email ID:")
+                    @Html.TextBoxFor(m => m.EmailId, new { @class = "form-control", @placeholder = "Enter official Email Id" })
+                </div>
+                <br />
+                <div>
+                    @Html.Label("Password:")
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Enter Password" })
+                </div>
+                <br />
+                <div>
+                    <input type="submit" value="Login" class="btn btn-danger" />
+                </div>
+                @if (ViewBag.error != null)
+                {
+                    <p class="text-danger">@ViewBag.error</p>
+                }
+            </div>
+        </div>
+    }
+</div>

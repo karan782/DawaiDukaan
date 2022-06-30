@@ -1,0 +1,32 @@
+﻿@model List<DAL.Models.getproductsbycategory_Result>
+@{
+    ViewBag.Title = "ProductsByCategory";
+    Layout = "~/Views/User/Shared/_LayoutPageUser.cshtml";
+}
+
+<div class="has-bg-img">
+    <img class="bg-img img-fluid" src="~/Images/home.jpg" alt="...">
+</div>
+<div class="bg-text" style="overflow-x:auto;">
+    <table class="table table-responsive table-hover table-bordered">
+        <tr class="bg-info">
+            <th>ProductId</th>
+            <th>ProductName</th>
+            <th> Brand</th>
+            <th> Category</th>
+            <th> MRP</th>
+            <th style="text-align:center">Action</th>
+        </tr>
+        @foreach (var prod in Model)
+        {
+            <tr style="color: white;">
+                <td>@prod.ProId</td>
+                <td>@prod.ProName</td>
+                <td>@prod.BrandName</td>
+                <td>@prod.Category</td>
+                <td>@prod.mrp</td>
+                <td>@Html.ActionLink("Add to Cart", "AddToCart", "User", new { id = prod.ProId }, new { @class = "btn btn-info" })</td>
+            </tr>
+        }
+    </table>
+</div>

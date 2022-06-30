@@ -1,0 +1,41 @@
+﻿@model DAL.Models.CustomerInfo
+@{
+    ViewBag.Title = "DeleteUser";
+    Layout = "~/Views/User/Shared/_LayoutPageUser.cshtml";
+}
+
+<div class="has-bg-img">
+    <img class="bg-img img-fluid" src="~/Images/home.jpg" alt="...">
+</div>
+<div class="bg-text" style="overflow-x:auto;">
+    @using (Html.BeginForm("DeleteUser", "User", FormMethod.Post))
+    {
+        <div class="row">
+            <div class="col-md-6">
+                <div>
+                    <span style="color: gold;">Customer ID: </span>@Model.CustId @Html.HiddenFor(m => m.CustId)
+                </div>
+                <div>
+                    <br />
+                    <span style="color: gold;">      Email: </span>@Model.Email @Html.HiddenFor(m => m.Email)
+                </div>
+                <div>
+                    <br />
+                    <span style="color: gold;">    Country: </span>@Model.Country @Html.HiddenFor(m => m.Country)
+                </div>
+                <div>
+                    <br />
+                    <span style="color: gold;">    PinCode: </span>@Model.PinCode @Html.HiddenFor(m => m.PinCode)
+                </div>
+                <div>
+                    <br />
+                    <span style="color: gold;">    Contact: </span>@Model.Contact @Html.HiddenFor(m => m.Contact)
+                </div>
+                <br />
+                <div>
+                    <input type="submit" value="Delete" class="btn btn-danger" />
+                </div>
+            </div>
+        </div>
+    }
+</div>

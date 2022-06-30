@@ -1,0 +1,42 @@
+﻿@model DAL.Models.Cart
+@{
+    ViewBag.Title = "AddToCart";
+    Layout = "~/Views/User/Shared/_LayoutPageUser.cshtml";
+}
+
+<div class="has-bg-img">
+    <img class="bg-img img-fluid" src="~/Images/home.jpg" alt="...">
+</div>
+<div class="bg-text" style="overflow-x:auto;">
+    @using (Html.BeginForm("AddToCart", "User", FormMethod.Post))
+    {
+        <div class="row">
+            <div class="col-md-6" style="font-family: Rockwell">
+                <div>
+                    <span style="color: gold;">Customer ID: </span>@Model.custid @Html.HiddenFor(m => m.custid)
+                </div>
+                <div>
+                    <br />
+                    <span style="color: gold;"> Product ID: </span> @Model.ProId @Html.HiddenFor(m => m.ProId)
+                </div>
+                <div>
+                    <br />
+                    <span style="color: gold;"> MRP :</span> @Model.mrp @Html.HiddenFor(m => m.mrp)
+                </div>
+                <div>
+                    <br />
+                    <span style="color: gold;"> @Html.Label("Quantity:")</span><span style="padding-left:10px;">@Html.EditorFor(m => m.qty)</span>
+                </div>
+                <br />
+                <div style="padding-top:10px">
+                    <input type="submit" value="Add To Cart" class="btn btn-success" />
+                </div>
+                <br />
+                @if (ViewBag.error != null)
+                {
+                    <p class="text" style="font:600; color:darkorange">@ViewBag.error</p>
+                }
+            </div>
+        </div>
+    }
+</div>

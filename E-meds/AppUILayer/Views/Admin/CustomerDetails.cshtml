@@ -1,0 +1,32 @@
+﻿@model List<DAL.Models.CustomerInfo>
+@{
+    ViewBag.Title = "CustomerDetails";
+    Layout = "~/Views/Admin/Shared/_LayoutPageAdmin.cshtml";
+}
+
+<div class="has-bg-img">
+    <img class="bg-img img-fluid" src="~/Images/home.jpg" alt="...">
+</div>
+<div class="bg-text" style="overflow-x:auto;">
+    <table class="table table-responsive table-hover table-bordered">
+        <tr class="bg-info">
+            <th>CustomerID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>PinCode</th>
+            <th>Country</th>
+            <th>Contact</th>
+        </tr>
+        @foreach (var prod in Model)
+        {
+            <tr style="color: white;">
+                <td>@prod.CustId</td>
+                <td>@prod.CustName</td>
+                <td>@prod.Email</td>
+                <td>@prod.PinCode</td>
+                <td>@prod.Country</td>
+                <td>@prod.Contact</td>
+            </tr>
+        }
+    </table>
+</div>
